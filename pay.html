@@ -1,0 +1,28 @@
+
+<?php
+session_start();
+
+?>
+
+<?php
+
+$conn =mysqli_connect("localhost","root","","cosmetics");
+$name2=$_GET['name'];
+$email2=$_GET['email'];
+$phno2=$_GET['ph'];
+$add2=$_GET['add'];
+$date2=$_GET['bday'];
+$tot = $_GET['tot'];
+if(!$conn){
+	die('could not connect'.mysql_error());
+}
+    $query="INSERT INTO ods (name1,mail1,nm1,add1,date1,tot) VALUES 
+    ('$name2','$email2','$phno2','$add2','$date2','$tot')";
+
+     mysqli_query($conn, $query);
+     $_SESSION['user']=$email2;
+     header("Location:conform.php");
+
+
+?>
+	

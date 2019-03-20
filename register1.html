@@ -1,0 +1,205 @@
+
+<html>
+    <head>
+    <title> this is the test web page </title>
+        <style>
+         .button {
+  padding: 10px 15px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: lawngreen;
+  background-color: lightcyan;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+           
+
+.button:hover {background-color: darkviolet}
+
+.button:active {
+  background-color: lightcoral;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+        
+            .error1{
+                color: red;
+            }
+        form {border: 3px solid red;width: 40%;height: 80%;}
+        </style>
+    </head>
+
+<body style="background-color:black" >
+    
+<center><h1 style="background-color:red">REGISTER FORM</h1>
+    <marquee style="color:white;">PLEASE REGISTER!!!!!AND BUY YOUR COSMETICS</marquee>
+    <BR><BR>
+        <video controls autoplay style="width: 100%;">
+  <source src="images/Real%20Cosmetics%20For%20Real%20People-%20Eyetex%20Dazller.mp4" type="video/mp4">
+  <source src="images/Real%20Cosmetics%20For%20Real%20People-%20Eyetex%20Dazller.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<form method="get"  novalidate>
+<table>
+     <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td>
+     <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td>
+<tr>
+<td style="color:white;">username</td>  
+<td><input type="text" name="username" id="username" pattern="[a-zA-Z]*" minlength="5" maxlength="20"  required/>
+    <span id="err1" class="error1"></span></td>
+    
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>  
+<tr>
+<td style="color:white;">password:</td>
+<td><input type="password" name="password" id="password" required/>
+     <span id="err2" class="error1"></span></td>
+</tr>
+     <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   
+<tr>
+<td style="color:white;">email:</td>
+<td><input type="email" name="email" id="mail" required/>
+     <span id="err3" class="error1"></span></td>
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>
+<tr>
+<td style="color:white;">phone no:</td>
+<td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required/>
+     <span id="err4" class="error1"></span></td>
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>
+<tr>
+<td style="color:white;">city:</td>
+<td>
+    <select name="city" required>
+    
+    <option value="chennai">chennai</option>
+        <option value="bangalore">bangalore</option>
+        <option value="delhi">delhi</option>
+        <option value="trichy">trichy</option>
+    </select>
+    
+     <span id="err5" class="error1"></span></td>
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>
+    <tr>
+<td style="color:white;">Address:</td>
+<td><input type="text" name="address" id= "address" required/>
+     <span id="err6" class="error1"></span></td>
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>
+    <tr>
+    <td></td><td></td>
+    </tr>
+    <tr>
+    <td></td><td></td>
+    </tr><tr>
+    <td></td><td></td>
+    </tr>
+    
+<tr>
+    
+<td></td><br>
+<td><center><input type="submit" value="submit" name="submit" id="submit" class="button"/></center></td>
+   
+   
+    <td></td><td>
+    
+    <a style="font-size:20px;" href="l.html">LOGIN</a></td>
+    
+</tr>
+    
+    
+    
+
+</table>
+</form>
+    <script> 
+            
+       var btns=document.getElementById('submit');
+       function checking()
+       {
+           var checkes=1;
+          
+      var uname=document.getElementById('username');
+    if(uname.checkValidity)
+	{
+	document.getElementById("err1").innerHTML=uname.validationMessage;
+if(uname.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+    if(uname.validity.patternMismatch){
+                  //console.log("wrong");
+               document.getElementById("err1").innerHTML="minimum 5 charcter";
+    }
+     
+    
+           
+           var pass=document.getElementById('password');
+    if(pass.checkValidity)
+	{
+	document.getElementById("err2").innerHTML=pass.validationMessage;
+if(pass.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+    
+           
+           var mail=document.getElementById('mail');
+    if(mail.checkValidity)
+	{
+	document.getElementById("err3").innerHTML=mail.validationMessage;
+ if(mail.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+    if(mail.validity.patternMismatch){
+                  //console.log("wrong");
+               document.getElementById("err3").innerHTML="invalid mailid";
+    }
+         
+           
+           var pno=document.getElementById('phone');
+
+       if(pno.checkValidity)
+	{
+	document.getElementById("err4").innerHTML=pno.validationMessage;
+         if(pno.validationMessage.toString().length!=0)
+                 checkes=0;
+    }
+    if(pno.validity.patternMismatch){
+                  //console.log("wrong");
+               document.getElementById("err4").innerHTML="Invalid Phone Number";
+    }
+           
+            
+           
+    var pass2=document.getElementById('address');
+    if(pass2.checkValidity)
+	{
+	document.getElementById("err6").innerHTML=pass.validationMessage;
+if(pass2.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+    
+	if(checkes==0)
+        {
+            return false;
+        }
+           else{
+               return true;
+           }
+           
+       };
+       btns.onclick=function(e){ 
+           var checkes=checking();   
+                               if(checkes==false) 
+                                  e.preventDefault();
+                               
+                               };
+            
+       </script>
+        </BR></BR></center>
+    </body>
+</html>s

@@ -1,0 +1,158 @@
+
+
+<html>
+    <head>
+        <style>
+.button {
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: lawngreen;
+	background-color: lightcyan;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+.button:hover {
+	background-color: darkviolet
+}
+.button:active {
+	background-color: lightcoral;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+ <style>+[]  .button {
+ border-radius: 4px;
+ background-color: #f4511e;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 15px;
+ padding: 10px;
+ width: 80px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+}
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.button:hover span {
+	padding-right: 25px;
+}
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+.error1 {
+	color: red;
+}
+</style>
+        <title> this is the test web page </title></head>
+<body style="background-color:black">
+<center><h1 style="background-color:red">LOGIN FORM</h1>
+     <li><a  style="float:right;font-size:200%;"href="admin.html">Admin</a></li>
+   <br> <br> <br> <br> <br> 
+<form method="get" action="buy.html" novalidate>
+    
+<table>
+<tr>
+<td style="color:white;">username:</td>
+<td><input type="text" name="username" id="username" pattern="[a-zA-Z]*" minlength="5" maxlength="20"  required/>
+    <span id="err1" class="error1"></span></td>
+</tr>
+    <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr>
+<tr>
+<td style="color:white;">password:</td>
+<td><input type="password" name="password" id="password" required/>
+     <span id="err2" class="error1"></span></td>
+</tr>
+ <tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr><tr><td></td></tr>  <tr><td></td></tr>    <tr><td></td></tr>   <tr><td></td></tr>
+
+    <tr></tr><td></td>
+    <td>
+    
+  <center> <input type="submit" class="button" value="LOGIN" name="submit" id="submit"/> </center></td>
+    
+    <tr></tr><td>hgf</td>
+   <tr><td></td>
+       
+<td>
+    <a style="font-size:250%;" href="register1.html">Register</a>
+    
+    </td></tr> 
+    
+   
+    <video controls autoplay style="width: 100%;">
+  <source src="images/Beauty%20Talk%20with%20House%20of%20Misu%20and%20Lakm%C3%A9.mp4" type="video/mp4">
+  <source src="images/Beauty%20Talk%20with%20House%20of%20Misu%20and%20Lakm%C3%A9.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+   
+
+</table>
+</form>
+    <script> 
+            
+       var btns=document.getElementById('submit');
+       function checking()
+       {
+           var checkes=1;
+          
+      var uname=document.getElementById('username');
+    if(uname.checkValidity)
+	{
+	document.getElementById("err1").innerHTML=uname.validationMessage;
+if(uname.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+    if(uname.validity.patternMismatch){
+                  //console.log("wrong");
+               document.getElementById("err1").innerHTML="minimum 5 charcter";
+    }
+     
+    
+           
+           var pass=document.getElementById('password');
+    if(pass.checkValidity)
+	{
+	document.getElementById("err2").innerHTML=pass.validationMessage;
+if(pass.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+           
+           if(checkes==0)
+        {
+            return false;
+        }
+           else{
+               return true;
+           }
+           
+       };
+       btns.onclick=function(e){ 
+           var checkes=checking();   
+                               if(checkes==false) 
+                                  e.preventDefault();
+                               
+                               };
+            
+       </script>
+    
+
+        </center>
+     </body></html>
+      
